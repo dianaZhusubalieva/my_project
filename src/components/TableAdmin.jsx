@@ -1,9 +1,10 @@
 import React from "react";
-import { Table } from "react-bootstrap";
+import { Table, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import { adminContext } from "../contexts/AdminContext";
 
 export default function TableAdmin() {
-  const { getMovies, movies } = React.useContext(adminContext);
+  const { getMovies, movies, deleteMovie } = React.useContext(adminContext);
   React.useEffect(() => {
     getMovies();
   }, []);
@@ -11,50 +12,50 @@ export default function TableAdmin() {
   return (
     <>
       {movies ? (
-        <Table striped bordered hover variant="dark">
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>name of movie</th>
-              <th>image of movie</th>
-              <th>link of movie</th>
-            </tr>
-          </thead>
-          <tbody>
-            {movies.map((movie) => (
-              <tr key={movie.id}>
-                <th>{movie.id}</th>
-                <th>{movie.name}</th>
-                <th>{movie.image}</th>
-                <th>{movie.link}</th>
+        <div className="table">
+          <Table sx={{ minWidth: 650 }} striped bordered hover variant="dark">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>name of movie</th>
+                <th>image of movie</th>
+                <th>link of movie</th>
+                <th>#</th>
+                <th>#</th>
               </tr>
-            ))}
-            console.log(movie);
-          </tbody>
-        </Table>
+            </thead>
+            <tbody>
+              {movies.length > 0
+                ? movies.map((movie) => (
+                    <tr key={movie.id}>
+                      <th>{movie.id}</th>
+                      <th>{movie.name}</th>
+                      <th>
+                        <img width="70" src={movie.image} alt="movie" />
+                      </th>
+                      <th>{movie.link}</th>
+                      <th>
+                        <Link to={`/admin/edit/${movie.id}`}>
+                          <Button variant="light">edit</Button>
+                        </Link>
+                      </th>
+                      <th>
+                        <Button
+                          onClick={() => deleteMovie(movie.id)}
+                          style={{ background: "darkred" }}
+                        >
+                          delete
+                        </Button>
+                      </th>
+                    </tr>
+                  ))
+                : ""}
+            </tbody>
+          </Table>
+        </div>
       ) : (
         <h2>loading...</h2>
       )}
     </>
   );
 }
-
-<tbody>
-  <tr>
-    <td>1</td>
-    <td>Mark</td>
-    <td>Otto</td>
-    <td>@mdo</td>
-  </tr>
-  <tr>
-    <td>2</td>
-    <td>Jacob</td>
-    <td>Thornton</td>
-    <td>@fat</td>
-  </tr>
-  <tr>
-    <td>3</td>
-    <td colSpan="2">Larry the Bird</td>
-    <td>@twitter</td>
-  </tr>
-</tbody>;

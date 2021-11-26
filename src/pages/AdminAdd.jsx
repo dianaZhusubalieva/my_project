@@ -30,7 +30,6 @@ const AddPage = () => {
   const handleSubmit = (movie) => {
     addMovie(movie);
     navigate("/admin");
-    console.log(movie);
   };
   return (
     <div className="add-page">
@@ -83,7 +82,7 @@ const AddPage = () => {
               />
             </Form.Group>
 
-            <Button variant="outline-dark" type="submit">
+            <Button variant="danger" type="submit">
               add a movie
             </Button>
           </form>
