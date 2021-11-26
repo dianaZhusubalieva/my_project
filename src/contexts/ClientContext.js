@@ -1,15 +1,16 @@
 import axios from "axios";
 import { API } from "../helpers/const";
 
-import React, { useEffect, useReducer, useState } from "react";
-import { ClientContext } from "../../../../makers/week9/final_project_askhat2/src/contexts/ClientContext";
+import React, { useReducer } from "react";
+export const ClientContext = React.createContext();
+
 const INIT_STATE = {
   movies: null,
-  detailMovie: null,
-  moviesAmountInCart: JSON.parse(localStorage.getItem("cart"))
-    ? JSON.parse(localStorage.getItem("cart")).movies.length
-    : 0,
-  cart: null,
+  // detailMovie: null,
+  // moviesAmountInCart: JSON.parse(localStorage.getItem("cart"))
+  //   ? JSON.parse(localStorage.getItem("cart")).movies.length
+  //   : 0,
+  // cart: null,
 };
 const reducer = (state = INIT_STATE, action) => {
   switch (action.type) {
@@ -19,11 +20,11 @@ const reducer = (state = INIT_STATE, action) => {
     case "GET_DETAILS":
       return { ...state, detailMovie: action.payload };
 
-    case "ADD_AND_DELETE_MOVIE_IN_CART":
-      return { ...state, moviesAmountInCart: action.payload };
+    // case "ADD_AND_DELETE_MOVIE_IN_CART":
+    //   return { ...state, moviesAmountInCart: action.payload };
 
-    case "GET_CART":
-      return { ...state, cart: action.payload };
+    // case "GET_CART":
+    //   return { ...state, cart: action.payload };
 
     default:
       return state;

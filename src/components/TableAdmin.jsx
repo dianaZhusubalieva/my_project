@@ -19,6 +19,7 @@ export default function TableAdmin() {
                 <th>#</th>
                 <th>name of movie</th>
                 <th>image of movie</th>
+                <th>category of movie</th>
                 <th>link of movie</th>
                 <th>#</th>
                 <th>#</th>
@@ -33,6 +34,8 @@ export default function TableAdmin() {
                       <th>
                         <img width="70" src={movie.image} alt="movie" />
                       </th>
+                      <th>{movie.category}</th>
+
                       <th>{movie.link}</th>
                       <th>
                         <Link to={`/admin/edit/${movie.id}`}>

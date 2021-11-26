@@ -5,7 +5,7 @@ import * as yup from "yup";
 import { Formik } from "formik";
 import { adminContext } from "../contexts/AdminContext";
 import { useNavigate } from "react-router-dom";
-import { Form, Button } from "react-bootstrap";
+import { Form, Button, Dropdown } from "react-bootstrap";
 
 const AddPage = () => {
   const schema = yup.object({
@@ -17,6 +17,11 @@ const AddPage = () => {
 
     image: yup
       .string()
+
+      .required("Поле обязательно для заполнения"),
+    category: yup
+      .string()
+      .min(3, "Минимальное количество символов 3")
 
       .required("Поле обязательно для заполнения"),
     link: yup
@@ -41,6 +46,7 @@ const AddPage = () => {
           name: "",
 
           image: "",
+          category: "",
           link: "",
         }}
       >
@@ -68,6 +74,26 @@ const AddPage = () => {
                 helperText={touched.image ? errors.image : ""}
                 onChange={handleChange}
               />
+            </Form.Group>
+
+            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+              <Form.Label>Category of movie</Form.Label>
+              <Form.Select
+                aria-label="Default select example"
+                type="text"
+                name="category"
+                value={values.category}
+                error={!!errors.category && touched.category}
+                helperText={touched.category ? errors.category : ""}
+                onChange={handleChange}
+              >
+                <option>Chose movie category</option>
+                <option value="horror">Horror</option>
+                <option value="comedy">Comedy</option>
+                <option value="fantasy">Fantasy</option>
+
+                <option value="drama">Dramas</option>
+              </Form.Select>
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">

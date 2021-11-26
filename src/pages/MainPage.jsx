@@ -10,11 +10,7 @@ const MainPage = () => {
     <div>
       <Navbar />
       <Banner />
-      <Row
-        title="NETFLIX ORIGINALS"
-        fetchUrl={requests.fetchNetflixOriginals}
-        isLargeRow
-      />
+      <Row title="NETFLIX ORIGINALS" isLargeRow />
 
       <Footer />
     </div>

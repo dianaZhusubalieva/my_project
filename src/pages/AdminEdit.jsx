@@ -74,6 +74,28 @@ const EditPage = () => {
                   onChange={handleChange}
                 />
               </Form.Group>
+              <Form.Group
+                className="mb-3"
+                controlId="exampleForm.ControlInput1"
+              >
+                <Form.Label>Category of movie</Form.Label>
+                <Form.Select
+                  aria-label="Default select example"
+                  type="text"
+                  name="category"
+                  value={values.category}
+                  error={!!errors.category && touched.category}
+                  helperText={touched.category ? errors.category : ""}
+                  onChange={handleChange}
+                >
+                  <option>Chose movie category</option>
+                  <option value="horror">Horror</option>
+                  <option value="comedy">Comedy</option>
+                  <option value="fantasy">Fantasy</option>
+
+                  <option value="drama">Dramas</option>
+                </Form.Select>
+              </Form.Group>
 
               <Form.Group
                 className="mb-3"

@@ -12,24 +12,27 @@ import ForgotPasswordPage from "./pages/ForgotPasswordPage";
 import RegistePpage from "./pages/RegisterPage";
 import LoginPage from "./pages/LoginPage";
 import MainPage from "./pages/MainPage";
+import ClientContextProvider from "./contexts/ClientContext";
 
 const MyRoutes = () => {
   return (
-    <AuthContextProvider>
-      <AdminContextProvider>
-        <BrowserRouter>
-          <Routes>
-            <Route path="/admin" element={<AdminPage />} />
-            <Route path="/admin/add" element={<AddPage />} />
-            <Route path="/admin/edit/:id" element={<EditPage />} />
-            <Route path="/register" element={<RegistePpage />} />
-            <Route path="/login" element={<LoginPage />} />
-            <Route path="/forgot" element={<ForgotPasswordPage />} />
-            <Route path="/" element={<MainPage />} />
-          </Routes>
-        </BrowserRouter>
-      </AdminContextProvider>
-    </AuthContextProvider>
+    <ClientContextProvider>
+      <AuthContextProvider>
+        <AdminContextProvider>
+          <BrowserRouter>
+            <Routes>
+              <Route path="/admin" element={<AdminPage />} />
+              <Route path="/admin/add" element={<AddPage />} />
+              <Route path="/admin/edit/:id" element={<EditPage />} />
+              <Route path="/register" element={<RegistePpage />} />
+              <Route path="/login" element={<LoginPage />} />
+              <Route path="/forgot" element={<ForgotPasswordPage />} />
+              <Route path="/" element={<MainPage />} />
+            </Routes>
+          </BrowserRouter>
+        </AdminContextProvider>
+      </AuthContextProvider>
+    </ClientContextProvider>
   );
 };
 
