@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+
+
+.bodyAllMovies {
+    background: #0e0101;
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    height: 100vh;
+
+
+
+}
+
+.topAll {
+    margin-top: 100px;
+}
+
+/* .forScroll {
+width: auto;
+} */
+.hero-container {
+    margin: 50px 0;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.main-container {
+    width: 170px;
+    height: 200px;
+    position: relative;
+    margin: 0 20px;
+}
+
+.poster-container {
+    width: 175px;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    z-index: 999;
+}
+
+.buyAcc {
+    padding-top: 20px;
+    background-color: #0e0101;
+
+}
+
+.poster {
+    width: 100%;
+    box-shadow: 0 5px 20px 3px rgba(0, 0, 0, 0.6);
+}
+
+.ticket-container {
+    background: rgba(43, 37, 37, 0.425);
+    width: 180px;
+    height: 167px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    position: absolute;
+    top: 40px;
+    box-shadow: 0 5px 20px 3px rgba(0, 0, 0, 0.6);
+    opacity: 0;
+}
+
+.main-container:hover .ticket-container {
+    opacity: 1;
+    animation: bounceIn 0.6s linear;
+}
+
+@keyframes bounceIn {
+
+    0%,
+    20%,
+    40%,
+    60%,
+    80%,
+    to {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(0.3, 0.3, 0.3);
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+
+    20% {
+        -webkit-transform: scale3d(1.03, 1.03, 1.03);
+        transform: scale3d(1.03, 1.03, 1.03);
+    }
+
+    40% {
+        -webkit-transform: scale3d(0.9, 0.9, 0.9);
+        transform: scale3d(0.9, 0.9, 0.9);
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: scale3d(1.01, 1.01, 1.01);
+        transform: scale3d(1.01, 1.01, 1.01);
+    }
+
+    80% {
+        -webkit-transform: scale3d(0.97, 0.97, 0.97);
+        transform: scale3d(0.97, 0.97, 0.97);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+}
+
+
+.ticket__content {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+     font-family: 'Poppins', sans-serif;
+}
+
+.ticket__movie-title {
+    text-transform: uppercase;
+    margin-bottom: 3px;
+    font-size: 1rem;
+
+    /* font-family: Impact, 'Arial Narrow Bold', sans-serif */
+}
+
+.ticket__movie-slogan {
+    color: #999;
+    font-size: 0.5rem;
+    margin-bottom: 19px;
+}
+
+
+
+
+.ticket__buy-btn {
+    cursor: pointer;
+    /* width: 77%; */
+    background: #5e0404be;
+    color: white;
+    padding: 15px 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.fav1 {
+    cursor: pointer;
+    /* width: 30%; */
+    background: rgba(121, 104, 104, 0.897);
+
+    color: white;
+    padding: 2px;
+    border-radius: 2px;
+    border: none;
+}
+
+.card-btns {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}

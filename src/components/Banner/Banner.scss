@@ -13,12 +13,23 @@
   margin-left: 30px;
   padding-top: 140px;
   height: 190px;
+  @media (max-width: 500px) {
+    margin-left: 0px;
+  }
 }
 
 .banner__title {
   font-size: 3rem;
   font-weight: 800;
   padding-top: 0.3rem;
+}
+
+@media (max-width: 500px) {
+  .banner__title {
+    font-size: 3rem;
+    font-weight: 800;
+    padding-top: 9.3rem;
+  }
 }
 
 .banner__description {
@@ -59,4 +70,9 @@
     rgba(37, 37, 37, 0.61),
     #111
   );
+}
+@media (max-width: 901px) {
+  .banner--fadeBottom {
+    display: none;
+  }
 }

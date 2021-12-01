@@ -1,0 +1,103 @@
+
+.comments-block {
+    width: 80%;
+    margin: 0 auto;
+}
+.main-comments{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.who-is {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2px;
+}
+
+.disp-name {
+    align-items: center;
+    color: rgba(255, 255, 255, 0.945);
+    font-weight: 700;
+    margin-left: 1%;
+}
+
+.date-comm {
+    color: #565959;
+    margin-left: 4%;
+}
+
+.comment-text {
+    margin-top: 1%;
+    margin-left: 6%;
+    margin-bottom: 1%;
+    font-size: 16px;
+}
+
+.edit-comm {
+    background-color: #dcdcdc !important;
+}
+
+.edit-comm-box {
+    background-color:
+        #f4f0ec !important;
+}
+
+.row2 {
+    display: flex;
+    width: 100%;
+}
+
+.form2 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.input-box2 {
+    background: #38313146;
+    border: none;
+    border-radius: 6px;
+    margin-top: 5px;
+    color: rgb(49, 49, 49);
+}
+
+.input-box:focus {
+    outline: none;
+}
+
+.input-div {
+    background: #4742423a;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+.input-name {
+    color: rgb(209, 209, 209);
+}
+
+
+.btn-div {
+    margin-top: 8px;
+    
+}
+
+/* .post-btn {
+    border: 2px solid #659bdb;
+    border-radius: 5px;
+    background-color: #659bdb;
+    padding: 5px 14px;
+    color: #ffffff;
+    font-weight: bolder;
+    margin-right: 10px;
+    font-size: 16px;
+    cursor: pointer;
+} */
+
+.post-btn:active {
+    outline: none;
+}

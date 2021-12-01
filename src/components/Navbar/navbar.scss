@@ -11,14 +11,57 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--primary);
-  color: var(--light);
+
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
   line-height: 1.4;
+  color: #ced4da;
 }
 
-img {
+.carousel-imgs {
   max-width: 100%;
+  margin-bottom: 4px;
+}
+//adaptive of carousels
+@media (max-width: 900px) {
+  .carousel-imgs {
+    max-width: 85%;
+  }
+}
+@media (max-width: 800px) {
+  .carousel-imgs {
+    max-width: 75%;
+  }
+}
+
+@media (max-width: 700px) {
+  .carousel-imgs {
+    max-width: 70%;
+  }
+}
+@media (max-width: 600px) {
+  .carousel-imgs {
+    object-fit: contain;
+    max-width: 65%;
+  }
+}
+
+@media (max-width: 500px) {
+  .carousel-imgs {
+    max-width: 64%;
+  }
+  .jRFJkP {
+    min-width: 42px;
+    height: 30px;
+  }
+  .cNNJIt {
+    font-size: 0.6em;
+
+    width: 50px;
+    height: 27px;
+    min-width: 37px;
+    line-height: 15px;
+  }
 }
 
 h1 {
@@ -43,6 +86,9 @@ h1 {
   // background-color: var(--primary);
   width: 100%;
   margin-bottom: 0px;
+  @media (max-width: 450px) {
+    width: 93%;
+  }
 }
 
 .netflixLogo {
@@ -63,6 +109,12 @@ h1 {
   color: #e50914;
   margin: 0;
   padding: 0;
+  @media (max-width: 500px) {
+    img {
+      width: 55px;
+      height: 25px;
+    }
+  }
 }
 
 .main-nav {
@@ -81,8 +133,25 @@ h1 {
 }
 
 .sub-nav {
-  grid-area: sb;
-  padding: 0 40px 0 40px;
+  // grid-area: sb;
+  padding: 0 5px;
+  img {
+    right: 0;
+  }
+  @media (max-width: 500px) {
+    img {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .bookmarkI {
+    display: none;
+  }
+  .text3 {
+    display: none;
+  }
 }
 
 .sub-nav a {
@@ -93,6 +162,9 @@ h1 {
 
 .sub-nav a:hover {
   color: var(--dark);
+}
+.adminIcon {
+  vertical-align: 0%;
 }
 
 /* MAIN CONTIANER */
@@ -163,19 +235,42 @@ footer {
 // search bar
 .input-box {
   position: relative;
+  margin-top: 7px;
 }
 
 .sr {
   position: absolute;
-  right: 13px;
-  top: 8px;
+  // right: px;
+  top: 5px;
   color: #ced4da;
+  left: 27%;
 }
 
-.form-control {
-  height: 35px;
-  background-color: #00000033;
-  border-color: rgba(0, 0, 0, 0);
+.input-box {
+  .form-control {
+    height: 30px;
+    background-color: #00000010;
+    border-color: rgba(0, 0, 0, 0);
+    width: 30%;
+    z-index: -1;
+  }
+}
+
+@media (max-width: 700px) {
+  .sr {
+    right: 6px;
+    top: 6px;
+  }
+  .input_box {
+    left: 35px;
+  }
+  .btn-danger {
+    padding: 4px;
+    margin-left: 120px;
+  }
+  .sub-nav {
+    padding: 0;
+  }
 }
 
 .form-control:focus {
@@ -294,20 +389,26 @@ footer {
 }
 
 // another styles , scroll background
-
+.main-nav {
+  @media (max-width: 700px) {
+    display: none;
+  }
+  @media (max-width: 500px) {
+    display: none;
+  }
+}
 .nav {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 70px;
-  z-index: 1;
+  height: 79px;
+  z-index: 9999;
   display: flex;
   justify-content: space-between;
   padding: 20px;
   transition-timing-function: ease-in;
   transition: all 0.5s;
 }
-
 .nav__black {
   background-color: #111;
   // height: 70px;
@@ -325,4 +426,16 @@ footer {
   right: 20px;
   width: 30px;
   object-fit: contain;
+}
+
+// burger button
+.burger-btn {
+  display: none;
+  button {
+    background: transparent;
+    border: none;
+  }
+  @media all and (max-width: 700px) {
+    display: block;
+  }
 }

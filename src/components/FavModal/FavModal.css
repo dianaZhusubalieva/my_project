@@ -1,0 +1,23 @@
+.favoriteModal {
+
+    display: flex;
+    justify-content: space-around;
+    color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.listColor {
+    color: black;
+    margin-top: 45px;
+}
+
+.favorite img {
+    margin-bottom: 3px;
+}
+
+.modal-content {
+    background-color: #dadada
+    
+}
+
+

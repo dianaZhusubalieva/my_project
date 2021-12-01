@@ -52,7 +52,7 @@ const AddPage = () => {
       >
         {({ handleSubmit, handleChange, values, touched, errors }) => (
           <form onSubmit={handleSubmit}>
-            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+            <Form.Group className="mb-2" controlId="exampleForm.ControlInput1">
               <Form.Label>Name of movie</Form.Label>
               <Form.Control
                 type="text"
@@ -64,7 +64,19 @@ const AddPage = () => {
               />
             </Form.Group>
 
-            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+            <Form.Group className="mb-2" controlId="exampleForm.ControlInput1">
+              <Form.Label>Description of movie</Form.Label>
+              <Form.Control
+                type="text"
+                name="description"
+                value={values.description}
+                error={!!errors.description && touched.description}
+                helperText={touched.description ? errors.description : ""}
+                onChange={handleChange}
+              />
+            </Form.Group>
+
+            <Form.Group className="mb-2" controlId="exampleForm.ControlInput1">
               <Form.Label>Image of movie</Form.Label>
               <Form.Control
                 type="text"
@@ -76,7 +88,7 @@ const AddPage = () => {
               />
             </Form.Group>
 
-            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+            <Form.Group className="mb-2" controlId="exampleForm.ControlInput1">
               <Form.Label>Category of movie</Form.Label>
               <Form.Select
                 aria-label="Default select example"
@@ -88,6 +100,8 @@ const AddPage = () => {
                 onChange={handleChange}
               >
                 <option>Chose movie category</option>
+                <option value="pop">popular</option>
+
                 <option value="horror">Horror</option>
                 <option value="comedy">Comedy</option>
                 <option value="fantasy">Fantasy</option>
@@ -96,7 +110,7 @@ const AddPage = () => {
               </Form.Select>
             </Form.Group>
 
-            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+            <Form.Group className="mb-2" controlId="exampleForm.ControlInput1">
               <Form.Label>Link of movie</Form.Label>
               <Form.Control
                 type="text"

@@ -15,10 +15,24 @@
   height: 190px;
 }
 
+@media (max-width: 500px) {
+  .banner__content {
+    margin-left: 0px;
+  }
+}
+
 .banner__title {
   font-size: 3rem;
   font-weight: 800;
   padding-top: 0.3rem;
+}
+
+@media (max-width: 500px) {
+  .banner__title {
+    font-size: 3rem;
+    font-weight: 800;
+    padding-top: 9.3rem;
+  }
 }
 
 .banner__description {
@@ -56,5 +70,11 @@
   height: 24.1rem;
   background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(rgba(37, 37, 37, 0.61)), to(#111));
   background-image: linear-gradient(180deg, transparent, rgba(37, 37, 37, 0.61), #111);
+}
+
+@media (max-width: 901px) {
+  .banner--fadeBottom {
+    display: none;
+  }
 }
 /*# sourceMappingURL=Banner.css.map */

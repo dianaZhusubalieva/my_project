@@ -7,6 +7,7 @@ export const adminContext = React.createContext();
 const INIT_STATE = {
   movies: null,
   movieToEdit: null,
+  originals: null,
 };
 const reducer = (state = INIT_STATE, action) => {
   switch (action.type) {
@@ -97,6 +98,8 @@ const AdminContextProvider = (props) => {
     }
   };
 
+  // ! GET FOR ORIGINALS MOVIE
+
   return (
     <adminContext.Provider
       value={{
@@ -106,6 +109,7 @@ const AdminContextProvider = (props) => {
         saveEditedMovie: saveEditedMovie,
         clearState: clearState,
         deleteMovie: deleteMovie,
+
         movies: state.movies,
         movieToEdit: state.movieToEdit,
       }}

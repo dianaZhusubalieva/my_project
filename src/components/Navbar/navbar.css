@@ -9,15 +9,59 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--primary);
-  color: var(--light);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   line-height: 1.4;
+  color: #ced4da;
 }
 
-img {
+.carousel-imgs {
   max-width: 100%;
+  margin-bottom: 4px;
+}
+
+@media (max-width: 900px) {
+  .carousel-imgs {
+    max-width: 85%;
+  }
+}
+
+@media (max-width: 800px) {
+  .carousel-imgs {
+    max-width: 75%;
+  }
+}
+
+@media (max-width: 700px) {
+  .carousel-imgs {
+    max-width: 70%;
+  }
+}
+
+@media (max-width: 600px) {
+  .carousel-imgs {
+    -o-object-fit: contain;
+       object-fit: contain;
+    max-width: 65%;
+  }
+}
+
+@media (max-width: 500px) {
+  .carousel-imgs {
+    max-width: 64%;
+  }
+  .jRFJkP {
+    min-width: 42px;
+    height: 30px;
+  }
+  .cNNJIt {
+    font-size: 0.6em;
+    width: 50px;
+    height: 27px;
+    min-width: 37px;
+    line-height: 15px;
+  }
 }
 
 h1 {
@@ -45,6 +89,12 @@ h1 {
   margin-bottom: 0px;
 }
 
+@media (max-width: 450px) {
+  .navbar-header {
+    width: 93%;
+  }
+}
+
 .netflixLogo {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
@@ -67,6 +117,13 @@ h1 {
   padding: 0;
 }
 
+@media (max-width: 500px) {
+  #logo img {
+    width: 55px;
+    height: 25px;
+  }
+}
+
 .main-nav {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
@@ -86,10 +143,26 @@ h1 {
 }
 
 .sub-nav {
-  -ms-grid-row: 1;
-  -ms-grid-column: 4;
-  grid-area: sb;
-  padding: 0 40px 0 40px;
+  padding: 0 5px;
+}
+
+.sub-nav img {
+  right: 0;
+}
+
+@media (max-width: 500px) {
+  .sub-nav img {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .bookmarkI {
+    display: none;
+  }
+  .text3 {
+    display: none;
+  }
 }
 
 .sub-nav a {
@@ -100,6 +173,10 @@ h1 {
 
 .sub-nav a:hover {
   color: var(--dark);
+}
+
+.adminIcon {
+  vertical-align: 0%;
 }
 
 /* MAIN CONTIANER */
@@ -178,19 +255,39 @@ footer {
 
 .input-box {
   position: relative;
+  margin-top: 7px;
 }
 
 .sr {
   position: absolute;
-  right: 13px;
-  top: 8px;
+  top: 5px;
   color: #ced4da;
+  left: 27%;
 }
 
-.form-control {
-  height: 35px;
-  background-color: #00000033;
+.input-box .form-control {
+  height: 30px;
+  background-color: #00000010;
   border-color: rgba(0, 0, 0, 0);
+  width: 30%;
+  z-index: -1;
+}
+
+@media (max-width: 700px) {
+  .sr {
+    right: 6px;
+    top: 6px;
+  }
+  .input_box {
+    left: 35px;
+  }
+  .btn-danger {
+    padding: 4px;
+    margin-left: 120px;
+  }
+  .sub-nav {
+    padding: 0;
+  }
 }
 
 .form-control:focus {
@@ -312,12 +409,24 @@ footer {
   }
 }
 
+@media (max-width: 700px) {
+  .main-nav {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .main-nav {
+    display: none;
+  }
+}
+
 .nav {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 70px;
-  z-index: 1;
+  height: 79px;
+  z-index: 9999;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -341,5 +450,20 @@ footer {
   width: 30px;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.burger-btn {
+  display: none;
+}
+
+.burger-btn button {
+  background: transparent;
+  border: none;
+}
+
+@media all and (max-width: 700px) {
+  .burger-btn {
+    display: block;
+  }
 }
 /*# sourceMappingURL=navbar.css.map */

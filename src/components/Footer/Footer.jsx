@@ -4,25 +4,25 @@ import "../../styles/Styles.css";
 const Footer = () => {
   return (
     <div className="container">
-      <section class="link">
-        <div class="logos">
+      <section className="link">
+        <div className="logos">
           <a href="#">
-            <i class="fab fa-facebook-square fa-2x logo"></i>
+            <i className="fab fa-facebook-square fa-2x logo"></i>
           </a>
           <a href="#">
-            <i class="fab fa-instagram fa-2x logo"></i>
+            <i className="fab fa-instagram fa-2x logo"></i>
           </a>
           <a href="#">
-            <i class="fab fa-twitter fa-2x logo"></i>
+            <i className="fab fa-twitter fa-2x logo"></i>
           </a>
           <a href="#">
-            <i class="fab fa-youtube fa-2x logo"></i>
+            <i className="fab fa-youtube fa-2x logo"></i>
           </a>
         </div>
-        <div class="sub-links">
+        <div className="sub-links">
           <ul>
             <li>
-              <a href="#">Audio and Subtitles</a>
+              <a href="https://t.me/DianaNetflix_bot">Telegram</a>
             </li>
             <li>
               <a href="#">Audio Description</a>

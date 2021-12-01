@@ -4,6 +4,23 @@ body {
 
 }
 
+/* * {
+  outline: 1px solid red;
+} */
+
+/* pagination */
+
+.pagination {
+  background-color: rgb(14, 1, 1);
+  display: flex;
+  justify-content: center;
+}
+
+.pagination ul {
+  display: flex;
+  list-style-type: none;
+
+}
 
 /* amin context add, edit pages */
 
@@ -35,8 +52,9 @@ body {
 .bodyRegister {
   height: 100vh;
   width: 100%;
-  background: linear-gradient(115deg, #322d3b 10%, #0c0c0f 90%);
-  /* background-color: rgb(71, 22, 22) red; */
+  /* background: linear-gradient(115deg, #220505 10%, #000000 90%); */
+  background: url("https://user-images.githubusercontent.com/33485020/108069438-5ee79d80-7089-11eb-8264-08fdda7e0d11.jpg")
+    /* background-color: rgb(71, 22, 22) red; */
 }
 
 .show-btn, .containerDi {
@@ -47,7 +65,7 @@ body {
 }
 
 .containerDi {
-  background: rgb(239, 232, 255);
+  background: rgba(0, 0, 0, 0.788);
   width: 410px;
   padding: 30px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
@@ -74,7 +92,7 @@ body {
   font-size: 35px;
   font-weight: 600;
   text-align: center;
-  color: rgb(39, 37, 39);
+  color: #fff
 }
 
 .containerDi form {
@@ -89,7 +107,7 @@ body {
 
 form .data label {
   font-size: 18px;
-  color: rgba(65, 65, 65, 0.856);
+  color: rgba(155, 155, 155, 0.733);
 }
 
 form .data input {
@@ -97,7 +115,9 @@ form .data input {
   width: 100%;
   padding-left: 10px;
   font-size: 17px;
-  border: 1px solid silver;
+  border: none;
+  border-radius: 6px;
+  background-color: rgba(46, 46, 46, 0.884);
 }
 
 form .data input:focus {
@@ -116,6 +136,7 @@ form .forgot-pass a {
 
 form .forgot-pass a:hover {
   text-decoration: underline;
+
 }
 
 form .btn {
@@ -133,8 +154,10 @@ form .btn .inner {
   position: absolute;
   left: -100%;
   z-index: -1;
-  background: -webkit-linear-gradient(right, #be3ecf, #1c1a36, #c951e0, #1e1e2c);
+  background: -webkit-linear-gradient(right, #9b0000, #200606, #a80000, #220202);
+  /* background-color: rgb(155, 4, 4); */
   transition: all 0.4s;
+  border-radius: 6px;
 }
 
 form .btn:hover .inner {
@@ -152,6 +175,7 @@ form .btn button {
   text-transform: uppercase;
   letter-spacing: 1px;
   cursor: pointer;
+  border-radius: 6px;
 }
 
 form .signup-link {
@@ -256,7 +280,125 @@ form .signup-link a:hover {
   color: rgba(169, 169, 169, 0.679);
 }
 
-.addMovie{
+.addMovie {
   margin-top: 80px;
   margin-left: 10px
+}
+
+/* detail page */
+
+
+
+.detailImage {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.detailImage button {
+  margin-right: 230px;
+}
+
+.characteristics strong {
+  width: 100px;
+  display: inline-block
+}
+
+.movie-desc {
+  margin-top: 60px;
+  width: 580px;
+}
+
+.movie-desc p {
+  margin-bottom: 35px;
+}
+
+.detail-page {
+  margin-top: 190px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.paymentPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70pxpx;
+  font-family: Montserrat-R, Montserrat-L, IndieFlower-R, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgba(0, 0, 0, 0.911),
+}
+
+/* adaptive */
+
+/* success payment page */
+
+.checkmark1 {
+  border-radius: 200px;
+  height: 200px;
+  width: 200px;
+  /* background: #F8FAF5; */
+  margin: 0 auto;
+}
+
+.main-success {
+  text-align: center;
+  padding: 40px 0;
+  /* background: #EBF0F5; */
+}
+
+.hh1 {
+  color: #8bca2b;
+  font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+  font-weight: 900;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.pp1 {
+  color: #404F5E;
+  font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+  font-size: 20px;
+  margin: 0;
+}
+
+.checkmark {
+  color: #8dcc2f;
+  font-size: 100px;
+  line-height: 200px;
+  margin-left: -15px;
+}
+
+.card {
+  background: rgb(202, 202, 202);
+  padding: 60px;
+  border-radius: 4px;
+  box-shadow: 0 2px 3px #C8D0D8;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.site-footer__fineprint {
+  margin-top: 20px;
+}
+
+/* modal */
+
+.modal-content {
+  background-color: transparent
+}
+
+.moviesBtn {
+  display: flex;
+  justify-content: end;
+  margin: 10px 50px;
+}
+
+.underMovieBtns {}
+
+.likeCombo {
+  display: flex;
 }

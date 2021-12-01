@@ -1,0 +1,58 @@
+.pop_nef {
+
+    flex: auto;
+
+    color: white;
+    height: 200px;
+    width: 400px;
+
+    margin: 10px;
+
+
+}
+
+.pop_nf_h3 {
+    color: white;
+    font-size: 20px;
+    padding-top: 25px;
+    padding-left: 50px;
+}
+
+.pop_name {
+
+    font-size: 10px;
+
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.pop_link {
+
+    margin-top: 27px;
+
+}
+
+.pop_item {
+    width: 218px;
+}
+
+.pop_main {
+    display: flex;
+    flex-direction: row;
+    height: 175px;
+
+}
+
+.pop_link:hover {
+    transform: scale(1.15);
+    transition: transform 550ms;
+}
+
+.btn1 {
+    background-color: white;
+    color: black;
+
+}
+
+/* movies btn */

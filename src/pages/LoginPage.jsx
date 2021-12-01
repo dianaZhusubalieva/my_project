@@ -76,7 +76,7 @@ export default function Registerpage() {
             </div>
             <div className="btn">
               <div className="inner"></div>
-              <button type="submit">Loge In</button>
+              <button type="submit">Login</button>
             </div>
             <div className="signup-link">
               Don't have an account? <Link to="/register">Sign Up</Link>

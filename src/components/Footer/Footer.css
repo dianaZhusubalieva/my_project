@@ -103,14 +103,6 @@ footer {
     margin: auto;
     padding-right: 20px;
   }
-  .main-nav {
-    display: -ms-grid;
-    display: grid;
-    grid-gap: 0px;
-    -ms-grid-columns: (1fr)[1];
-        grid-template-columns: repeat(1, 1fr);
-    text-align: center;
-  }
   h1 {
     text-align: center;
     font-size: 18px;
